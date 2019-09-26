@@ -7,7 +7,6 @@ public class InstancedBehaviourScript : MonoBehaviour
 {
     public Color color = Color.white;
 
-    // Start is called before the first frame update
     void Start()
     {
         var renderer = GetComponent<Renderer>();
@@ -19,7 +18,6 @@ public class InstancedBehaviourScript : MonoBehaviour
         renderer.SetPropertyBlock(block);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

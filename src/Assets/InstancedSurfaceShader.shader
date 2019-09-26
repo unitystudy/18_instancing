@@ -46,7 +46,7 @@
 			float2 d = tex2Dlod(_DisplacementMap, float4(v.vertex.xy, 0, 0)).xy;// 2次元ノイズの読み込み
 			v.vertex.xz += (v.vertex.y + 1.0) * d.xy * 10;// 高いほど大きく揺らす
 		}
-			void surf (Input IN, inout SurfaceOutputStandard o)
+		void surf (Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
 //			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;// ★下記に変更
@@ -61,3 +61,4 @@
     }
     FallBack "Diffuse"
 }
+
