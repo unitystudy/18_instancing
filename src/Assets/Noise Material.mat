@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InstancedMaterial
-  m_Shader: {fileID: 4800000, guid: 1ef9a15cdc33cb2418109244343ebdb7, type: 3}
+  m_Name: Noise Material
+  m_Shader: {fileID: 4800000, guid: 8c90af32a8962484f8103a047897201e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -33,10 +33,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DisplacementMap:
-        m_Texture: {fileID: 8600000, guid: d2f2c5c79291ef5419a723b202c29f14, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
