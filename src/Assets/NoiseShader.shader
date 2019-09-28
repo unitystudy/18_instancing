@@ -44,7 +44,7 @@
 
 			float Fbm(float2 texcoord)
 			{
-				float2 tc = texcoord * float2(.05, .05);
+				float2 tc = texcoord * float2(.1, .1);
 				float time = _Time.y * 0.5;
 				float noise
 					= Noise((tc + time) * 1.0)
@@ -65,3 +65,4 @@
         }
     }
 }
+

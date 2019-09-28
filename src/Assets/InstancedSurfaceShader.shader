@@ -43,8 +43,9 @@
 
 		// ☆頂点シェーダを追加
 		void vert(inout appdata_full v) {
-			float2 d = tex2Dlod(_DisplacementMap, float4(v.vertex.xy, 0, 0)).xy;// 2次元ノイズの読み込み
-			v.vertex.xz += (v.vertex.y + 1.0) * d.xy * 10;// 高いほど大きく揺らす
+			float4 vertex_w = mul(unity_ObjectToWorld, float4(0,v.vertex.y,0,1));// 円柱の中心軸の位置で読み込み
+			float2 d = tex2Dlod(_DisplacementMap, float4(vertex_w.xy, 0, 0)).xy;// 2次元ノイズの読み込み
+			v.vertex.xz += vertex_w.y * d.xy * 10;// 高いほど大きく揺らす
 		}
 		void surf (Input IN, inout SurfaceOutputStandard o)
         {
